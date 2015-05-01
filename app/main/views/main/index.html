@@ -1,0 +1,85 @@
+<:Title>
+  Demo
+
+<:Body>
+  <div class='ui white vertical segment'>
+    <div class='ui page four column grid'>
+      <div class='column'>
+        <h1 class="ui header">{{ _jobs.count }} jobs</h1>
+      </div>
+    </div>
+    <div class='ui page four column grid'>
+      {{ _jobs.each do |job| }}
+      <div class='column'>
+        <div class='ui fluid card'>
+          <div class='image'>
+            <!--<img src="/assets/images/Export-02.png">-->
+            <img data-src="holder.js/100%x300/random">
+            {{ prepare_holder }}
+          </div>
+          <div class='content'>
+            <i class="right floated like icon" e-click='like(job)'></i>
+            <i class="right floated star icon" e-click='favorite(job)'></i>
+            <div class="header">{{ job._title }}</div>
+            <div class="meta">{{ job._posted_at }}</div>
+            <div class="meta">
+            </div>
+            <div class="description">
+              <p>Cute dogs come in a variety of shapes and sizes. Some cute dogs are cute for their adorable faces, others for their tiny stature, and even others for their massive size.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='column'>
+        <div class="ui internally grid">
+          <div class="row">
+            <div class="right aligned five wide column">
+              Left
+            </div>
+            <div class="center aligned six wide column">
+              <div class="ui inverted circular sample segment match-score">
+                <h2 class="ui inverted header">
+                  <div class="sub header">$10.99</div>
+                </h2>
+              </div>
+            </div>
+            <div class="left aligned five wide column">
+              Right
+            </div>
+          </div>
+          <div class="row">
+            <div class="three wide column">
+            </div>
+            <div class="ten wide column">
+              <div class="ui items">
+                <div class="item">
+                  <div class="ui tiny image">
+                    <img data-src="holder.js/100%x80/random">
+                  </div>
+                  <div class="content">
+                    <div class="header">Foxy</div>
+                    <div class="meta">
+                      <span class="price">$1200</span>
+                      <span class="stay">1 Month</span>
+                    </div>
+                    <div class="description">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="green ui labeled icon button">
+                <i class="signup icon"></i>
+                Signup
+              </div>
+
+            </div>
+            <div class="three wide column">
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>

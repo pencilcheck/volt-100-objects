@@ -1,0 +1,15 @@
+<:Title>
+  {{ view main_path, "title", {controller_group: 'main'} }}
+
+<:Body>
+  <:volt:notices />
+
+  {{ view main_path, 'body', {controller_group: 'main'} }}
+
+  <div class='ui inverted black vertical segment footer'>
+    <div class="ui page grid">
+      <div class='column'>
+        <p>&copy; Demo {{ Time.now.year }}</p>
+      </div>
+    </div>
+  </div>
