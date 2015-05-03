@@ -3,6 +3,10 @@ module Main
   class MainController < Volt::ModelController
     model :store
 
+    def index
+      self.model = store._jobs
+    end
+
     def like(job)
     end
 

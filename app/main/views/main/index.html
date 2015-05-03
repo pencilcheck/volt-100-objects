@@ -5,17 +5,15 @@
   <div class='ui white vertical segment'>
     <div class='ui page four column grid'>
       <div class='column'>
-        <h1 class="ui header">{{ _jobs.count }} jobs</h1>
+        <h1 class="ui header">{{ model.count }} jobs</h1>
       </div>
     </div>
     <div class='ui page four column grid'>
-      {{ _jobs.each do |job| }}
+      {{ model.each do |job| }}
       <div class='column'>
         <div class='ui fluid card'>
           <div class='image'>
-            <!--<img src="/assets/images/Export-02.png">-->
-            <img data-src="holder.js/100%x300/random">
-            {{ prepare_holder }}
+            <!--<img data-src="holder.js/100%x300/random">-->
           </div>
           <div class='content'>
             <i class="right floated like icon" e-click='like(job)'></i>
@@ -55,7 +53,7 @@
               <div class="ui items">
                 <div class="item">
                   <div class="ui tiny image">
-                    <img data-src="holder.js/100%x80/random">
+                    <!--<img data-src="holder.js/100%x80/random">-->
                   </div>
                   <div class="content">
                     <div class="header">Foxy</div>
